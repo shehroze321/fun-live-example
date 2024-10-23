@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Base64 encoding function
-app.post("/functions/base64Encode", (req, res) => {
+app.post("/functions/customBase64Encode", (req, res) => {
   const { input } = req.body;
 
   if (!input) {
@@ -16,10 +16,10 @@ app.post("/functions/base64Encode", (req, res) => {
   res.send({ output });
 });
 
-// Documentation for base64Encode function
-app.get("/functions/base64Encode", (req, res) => {
+// Documentation for customBase64Encode function
+app.get("/functions/customBase64Encode", (req, res) => {
   res.send({
-    name: "base64Encode",
+    name: "customBase64Encode",
     description: "Encode anything to base64",
     input: {
       type: "string",
