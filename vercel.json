@@ -1,6 +1,5 @@
 {
-  "version": 1,
-  "name": "fun-live-example",
+  "version": 2,
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+  "routes": [{ "src": "/functions/base64Encode", "dest": "/app.js" }]
 }
